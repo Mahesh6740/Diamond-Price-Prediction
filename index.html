@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Prediction Here</title>
+</head>
+
+<body><center>
+  <h1>Diamond Prize Prediction</h1>
+  <h2>Using linear regression created by me</h2>
+  <form method="POST" action="/predict">
+    <p>Carat</p>
+    <input name="ct" required>
+    <p>Cut</p>
+    <input name="cu" required>
+    <p>Color</p>
+    <input name="co" required>
+    <p>Clarity</p>
+    <input name="cl" required>
+    <p>Depth</p>
+    <input name="dp" required>
+    <p>Table</p>
+    <input name="tb" required>
+    <p>X</p>
+    <input name="x" required>
+    <p>Y</p>
+    <input name="y" required>
+    <p>Z</p>
+    <input name="z" required>
+    <br>
+    <br>
+    <button type="submit">Submit</button>
+  </form>
+
+  <div class="result">
+    {% if predict is not none %}
+      <p>Prediction price is: <strong><h3 style="font-family: 'Times New Roman', Times, serif;">{{ predict }}</h3></strong></p>
+    {% endif %}
+  </div>
+</center>
+</body>
+
+</html>
